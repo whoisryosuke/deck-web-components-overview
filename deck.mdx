@@ -2,13 +2,21 @@ import { Head, Notes } from 'mdx-deck'
 import prism from './prism'
 import { theme } from './theme'
 
+import Card from "./components/BasicCard"
+import Featured from "./components/Featured"
+
 export const themes = [ prism, theme ]
 
 <Head>
   <title>Are Web Components the Future?</title>
 </Head>
 
-# Are Web Components the Future?
+<Featured>
+  <Card 
+    title="Are Web Components the Future?"
+    subheader="Yep"
+  />
+</Featured>
 
 ---
 
@@ -86,6 +94,20 @@ blogPosts.forEach(blogPost => {
 ```
 
 ---
+
+### HTML Elements + Templates
+
+We use grab the template inside the connectedCallback() and print it to the DOM.
+
+```js
+class OneDialog extends HTMLElement {
+  connectedCallback() {
+    const template = document.getElementById('one-dialog');
+    const node = document.importNode(template.content, true);
+    this.appendChild(node);
+  }
+}
+```
 
 ## Why use Web Components?
 

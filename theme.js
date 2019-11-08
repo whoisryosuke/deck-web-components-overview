@@ -1,6 +1,14 @@
-const white = "#fff";
-const black = "#000";
-const primary = "rgb(0, 92, 221)";
+const colors = {
+  text: "#111212",
+  background: "#fff",
+  primary: "#005CDD",
+  secondary: "#6D59F0",
+  muted: "#f6f6f9",
+  gray: "#D3D7DA",
+  highlight: "hsla(205, 100%, 40%, 0.125)",
+  white: "#FFF",
+  black: "#111212"
+};
 
 export const theme = {
   googleFont:
@@ -9,11 +17,7 @@ export const theme = {
     heading: '"Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif',
     body: '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif'
   },
-  colors: {
-    text: black,
-    background: white,
-    primary: primary
-  },
+  colors,
   styles: {
     root: {
       textAlign: "left",
